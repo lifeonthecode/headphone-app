@@ -3,7 +3,7 @@ import { icons, socialIcon } from "../assets";
 
 const Footer = () => {
     return (
-        <div className="w-full pt-20 footer-bg">
+        <div className="w-full pt-20 footer-bg px-4 md:px-0">
             <div className="max-w-310 w-full mx-auto">
                 {/* FOOTER TOP  */}
                 <div className="flex flex-col items-center justify-center text-center pb-10">

@@ -56,7 +56,7 @@ const EveryDetails = () => {
         ]
     };
     return (
-        <div className="w-full flex flex-col items-center py-10 lg:py-20">
+        <div className="w-full flex flex-col items-center py-10 lg:py-20 px-4 md:px-0">
             {/* SECTION HEADING  */}
             <div className="mb-20">
                 <SectionHeading title="Every Detail Matters" subtitle="From the stich to the signal, precision lives here." />
