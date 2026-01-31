@@ -45,12 +45,14 @@ const EveryDetails = () => {
                 breakpoint: 768,
                 settings: {
                     slidesToShow: 2,
+                    slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 540,
                 settings: {
                     slidesToShow: 1,
+                    slidesToScroll: 1,
                 }
             }
         ]

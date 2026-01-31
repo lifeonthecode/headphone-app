@@ -72,6 +72,15 @@ const YourStyleSlider = () => {
                     slidesToScroll: 1,
                 }
             },
+            {
+                breakpoint: 560,
+                settings: {
+                    slidesToShow: 1,
+                    centerMode: true,
+                    dots: true,
+                    slidesToScroll: 1,
+                }
+            },
         ]
     };
 
