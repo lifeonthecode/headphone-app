@@ -75,10 +75,11 @@ const YourStyleSlider = () => {
             {
                 breakpoint: 560,
                 settings: {
+                    centerMode: false,
                     slidesToShow: 1,
-                    centerMode: true,
                     dots: true,
                     slidesToScroll: 1,
+                    
                 }
             },
         ]
