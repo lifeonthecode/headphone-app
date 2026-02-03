@@ -2,37 +2,35 @@ import "slick-carousel/slick/slick.css";
 import "slick-carousel/slick/slick-theme.css";
 import Slider from "react-slick";
 import { productImages } from "../assets";
+
 interface Slide {
     image: string,
-    color: string,
-}
+    color: string
+};
+
 const slides: Slide[] = [
     {
         image: productImages.headphone1,
-        color: '#d8b74b'
+        color: "#d8b74b",
     },
     {
         image: productImages.headphone2,
-        color: '#94915b'
+        color: "#94915b",
     },
     {
         image: productImages.headphone3,
-        color: '#883d39'
-    },
-    {
-        image: productImages.headphone5,
-        color: '#d8b74b'
+        color: "#883d39",
     },
 ]
 
-const YourStyleSlider = () => {
+const TechSpecsSlider = () => {
     const settings = {
         dots: true,
         dotsClass: "slick-dots slick-thumb",
-        centerMode: true,
         infinite: true,
-        slidesToShow: 3,
+        slidesToShow: 1,
         slidesToScroll: 1,
+        arrows: false,
 
         speed: 0,
         cssEase: "linear",
@@ -55,7 +53,7 @@ const YourStyleSlider = () => {
             {
                 breakpoint: 1024,
                 settings: {
-                    slidesToShow: 3,
+                    slidesToShow: 1,
                     centerMode: true,
                     slidesToScroll: 1,
                 }
@@ -77,19 +75,30 @@ const YourStyleSlider = () => {
                     slidesToShow: 1,
                     dots: true,
                     slidesToScroll: 1,
-                    
+
+                }
+            },
+            {
+                breakpoint: 440,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+                    dots: true,
+
                 }
             },
         ]
     };
-
     return (
-        <div className="your-style-slider-container w-full md:min-h-200 h-full">
+        <div className="tech-specs-slider-container w-full">
             <Slider {...settings}>
                 {
                     slides?.map((item, index) => (
-                        <div key={index} className="your-style-slide">
-                            <img src={item.image} alt={`product-${index + 1}`} />
+                        <div key={index}>
+                            <div className="w-full min-h-105 h-full flex  justify-center">
+                                <img src={item?.image} className="max-w-[320px] sm:min-h-90 md:min-h-105 h-full object-cover" alt={`tech-specs-product-${index+1}`} />
+                            </div>
                         </div>
                     ))
                 }
@@ -98,4 +107,4 @@ const YourStyleSlider = () => {
     );
 };
 
-export default YourStyleSlider;
+export default TechSpecsSlider;
