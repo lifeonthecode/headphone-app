@@ -29,11 +29,10 @@ const YourStyleSlider = () => {
     const settings = {
         dots: true,
         dotsClass: "slick-dots slick-thumb",
-        centerMode: true,
-        infinite: true,
         slidesToShow: 3,
         slidesToScroll: 1,
-
+        centerMode: true,
+        infinite: true,
         speed: 0,
         cssEase: "linear",
         waitForAnimate: false,
@@ -66,18 +65,25 @@ const YourStyleSlider = () => {
                 settings: {
                     slidesToShow: 1,
                     centerMode: true,
-                    dots: true,
                     slidesToScroll: 1,
                 }
             },
             {
                 breakpoint: 560,
                 settings: {
-                    centerMode: false,
                     slidesToShow: 1,
-                    dots: true,
                     slidesToScroll: 1,
-                    
+                    centerMode: false,
+
+                }
+            },
+            {
+                breakpoint: 440,
+                settings: {
+                    slidesToShow: 1,
+                    slidesToScroll: 1,
+                    centerMode: false,
+
                 }
             },
         ]
