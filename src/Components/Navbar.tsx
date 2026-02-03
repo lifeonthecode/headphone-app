@@ -3,9 +3,11 @@ import { icons } from "../assets";
 import DesktopMenu from "./DesktopMenu";
 import MobileMenu from "./MobileMenu";
 import { useEffect, useState } from "react";
+interface BgColor {
+    bgColor?: string
+}
 
-
-const Navbar = () => {
+const Navbar = ({bgColor}:BgColor) => {
     const [open, setOpen] = useState<boolean>(false);
     const [scrolled, setScrolled] = useState<boolean>(false);
 
@@ -26,7 +28,7 @@ const Navbar = () => {
     }, []);
 
     return (
-        <div className={`w-full h-23 fixed top-0 left-0 flex items-center justify-center transition-all duration-300 ease-in-out px-4 z-50 ${scrolled ? "header-bg shadow-xl" : ""}`}>
+        <div className={`w-full h-23 ${bgColor && bgColor} fixed top-0 left-0 flex items-center justify-center transition-all duration-300 ease-in-out px-4 z-50 ${scrolled ? "header-bg shadow-xl" : ""}`}>
             <div className="max-w-310 w-full mx-auto">
                 <div className="flex items-center justify-between">
                     {/* LOGO WRAPPER  */}

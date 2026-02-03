@@ -89,7 +89,7 @@ const Compare = () => {
         <div className="w-full pt-23 bg-[#d8d8d8] pb-20">
 
             {/* NAVBAR  */}
-            <Navbar />
+            <Navbar bgColor={'bg-[#d9d9d9]'} />
 
             {/* SECTION HEADING  */}
             <div className="pb-10">

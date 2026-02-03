@@ -220,7 +220,7 @@ const TechSpecs = () => {
         <div className="w-full h-full bg-[#d8d8d8] pt-23">
             {/* NAVBAR  */}
             <div className="relative z-50">
-                <Navbar />
+                <Navbar bgColor={'bg-[#d9d9d9]'} />
             </div>
 
             <div className="max-w-310 w-full mx-auto px-4 md:px-0">
